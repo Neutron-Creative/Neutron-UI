@@ -1,9 +1,7 @@
 <h1 align="center">
     <br>
     <br>
-    <img src="static/neutron-ui-logo.svg"/>
-    <br>
-    Neutron UI
+    <img width="200" src="static/neutron-ui-logo.svg"/>
     <br>
     <br>
 </h1>
