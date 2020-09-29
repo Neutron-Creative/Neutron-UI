@@ -1,19 +1,23 @@
 <template>
 	<div>
-		<Container align="center">
-			<h1 class="text-6xl font-semibold mb-2">Build better interfaces with Neutron UI</h1>
-			<p class="leading-relaxed text-gray-700 text-xl mb-4">A free and open-source UI kit built with TailwindCSS. Dozens of responsive HTML components built by the team at Neutron Creative Inc.</p>
+		<Container align="center" padding="32">
+			<h1 class="text-6xl leading-tight font-bold mb-4">Build better interfaces with Neutron UI</h1>
+			<p class="leading-relaxed text-gray-700 text-xl mb-8">Dozens of responsive HTML components built with TailwindCSS & VueJS, published free by the team at Neutron Creative, in our mission to make the world open-source.</p>
 			<div class="flex flex-row items-center justify-center mb-4">
-				<Button class="mb-2 md:mb-0 md:mr-4">Browse components</Button>
-				<Button background="indigo-600">Download for free</Button>
+				<n-link to="/library">
+					<Button size="lg" class="mb-2 md:mb-0 md:mr-4">Browse components</Button>
+				</n-link>
+				<a href="https://github.com/Neutron-Creative/Neutron-UI">
+					<Button size="lg" background="indigo-600">Download for free</Button>
+				</a>
 			</div>
 			<n-link class="text text-gray-600 hover:underline" to="">
-				<span>Currently v0.1.0. Last updated at August 28, 2020</span>
+				<span>Currently v0.1.0. Last updated on September 28, 2020</span>
 			</n-link>
 		</Container>
 		<Container align="left" background="white">
 				<h2 class="text-center font-semibold text-4xl text-gray-900" data-aos="fade-up" data-aos-duration="1000">Get started in 30 seconds</h2>
-				<div class="flex flex-row w-full items-center justify-center">
+				<Container width="full" padding="0" mobile-padding="0" direction="row" background="white">
 					<div class="flex w-full lg:w-5/12 p-6">
 						<form data-aos="fade-up" data-aos-duration="1000" style="transform:perspective(1040px) rotate(0deg) rotateX(-2deg) rotateY(12deg) translateZ(10px) scale(1.05); " class="shadow-lg relative w-full min-w-sm max-w-sm mt-4 p-6 bg-white rounded-md shadow-md flex-col">
 							<div class="w-full h-full absolute t-0 l-0 r-0 b-0 z-1"></div>
@@ -41,15 +45,15 @@
 							<p class="text-gray-700 leading-relaxed">View our component library and copy your favorite components for your application in seconds, no download required.</p>
 						</div>
 						<div data-aos="fade-up" data-aos-duration="1000" class="p-6 hover:bg-gray-100 rounded cursor-pointer">
-							<h3 class="font-semibold text-xl mb-2 text-gray-900">Lightweight, no installation required.</h3>
-							<p class="text-gray-700 leading-relaxed">Our library is based on TailwindCSS, meaning there are no additional dependencies or installation required.</p>
+							<h3 class="font-semibold text-xl mb-2 text-gray-900">Easy to get started, no installation required</h3>
+							<p class="text-gray-700 leading-relaxed">Our library is based on TailwindCSS & VueJS (optional), meaning there are no additional dependencies or installation required.</p>
 						</div>
 						<div data-aos="fade-up" data-aos-duration="1000" class="p-6 hover:bg-gray-100 rounded cursor-pointer">
-							<h3 class="font-semibold text-xl mb-2 text-gray-900">Customizable with TailwindCSS</h3>
-							<p class="text-gray-700 leading-relaxed">Utilize the power of TailwindCSS and brand your application with easily customizable colors, fonts, and more.</p>
+							<h3 class="font-semibold text-xl mb-2 text-gray-900">Build and customize without limits</h3>
+							<p class="text-gray-700 leading-relaxed">Utilize the full power of TailwindCSS and brand your application in seconds with customizable colors, fonts, and more easily accessible in the Tailwind CSS configurations file.</p>
 						</div>
 					</div>
-				</div>
+				</Container>
 		</Container>
 		<Container direction="row">
 				<div class="flex flex-col p-4">
@@ -59,8 +63,12 @@
 					</p>
 				</div>
 				<div class="flex flex-col p-4 ml-auto">
-					<Button class="mb-2">Browse components</Button>
-					<Button background="indigo-600">Download for free</Button>
+					<n-link to="/library" class="w-full">
+						<Button class="mb-2 w-full">Browse components</Button>
+					</n-link>
+					<a href="https://github.com/Neutron-Creative/Neutron-UI" class="w-full">
+						<Button class="w-full" background="indigo-600">Download for free</Button>
+					</a>
 				</div>
 		</Container>
 	</div>

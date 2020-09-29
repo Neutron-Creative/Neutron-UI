@@ -1,5 +1,5 @@
 <template>
-	<button :class="buttonStyles" :style="inlineButtonStyles">
+	<button :class="buttonStyles" :style="'height:fit-content;' + inlineButtonStyles">
 		<slot></slot>
 	</button>
 </template>
@@ -31,13 +31,22 @@
                 this.buttonStyles += ' text-' + this.color;
             }
 
+            // If shadow invert is requested, apply policy
+            if(this.invertedShadow) this.buttonStyles += ' hover:bg-gray-200';
+
             // Apply text size to button
 			this.buttonStyles += ' text-' + this.size;
 
 		    switch(this.styles) {
-		            default:
-		                this.buttonStyles += ' p-4 px-6 rounded-lg shadow font-semibold';
-		                break;
+		        case 'inline':
+		            this.buttonStyles += ' p-2 px-4 rounded font-semibold';
+		            break;
+			    case 'short':
+                    this.buttonStyles += ' p-2 px-4 rounded-lg shadow font-semibold';
+                    break;
+			    default:
+				    this.buttonStyles += ' p-4 px-6 rounded-lg shadow font-semibold';
+				    break;
 		    }
 		},
 		props: {
@@ -46,7 +55,7 @@
 				type: String
 			},
 			uppercase: {
-			    default: true,
+			    default: false,
 			    type: Boolean
 			},
 			background: {
@@ -60,13 +69,21 @@
 			size: {
 			    type: String,
 				default: 'sm'
+			},
+			invertedShadow: {
+			    type: Boolean,
+				default: false
 			}
 		}
 	};
 </script>
 
 <style scoped>
+	button {
+		transition: transform .15s ease-in-out;
+	}
 	button:hover {
-		box-shadow: inset 0 -100px 0 0 rgba(255,255,255,.1);
+		/*box-shadow: inset 0 -100px 0 0 rgba(255,255,255,.1);*/
+		transform: scale(1.01);
 	}
 </style>
