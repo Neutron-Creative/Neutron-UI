@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<Container direction="row" class="shadow sticky top-0 z-40" max-width="6xl" padding="4">
-			<n-link to="/" class="flex flex-row items-center justify-center">
+			<n-link to="/" class="flex flex-row items-center justify-center mx-auto md:mx-0">
 				<Logo style="max-width: 115px;" class="mr-4"/>
 			</n-link>
-			<a href="https://github.com/Neutron-Creative/Neutron-UI" class="flex flex-row items-center justify-center">
+			<a href="https://github.com/Neutron-Creative/Neutron-UI" class="flex flex-row items-center justify-center md:flex hidden">
 				<span class="text-gray-600 text-sm cursor-pointer hover:underline" v-if="this.github_meta">Last updated on {{ new Date(github_meta.updated_at).toLocaleDateString() }}</span>
 			</a>
 			<div class="ml-auto flex flex-row items-center hidden md:flex">
