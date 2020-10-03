@@ -40,12 +40,12 @@
 				default: 'left'
 			},
 			mobilePadding: {
-	            type: Number,
-				default: 8
+	            type: String,
+				default: '8'
 			},
 			padding: {
-	            type: Number,
-				default: 20
+	            type: String,
+				default: '20'
 			},
 			background: {
 	            type: String,

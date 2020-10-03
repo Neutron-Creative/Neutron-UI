@@ -18,14 +18,14 @@
 		    if(this.uppercase) this.buttonStyles+= ' uppercase';
 
 		    // If background is image, gradient, or hex color
-		    if(this.background.indexOf('#') >= 0 || this.background.indexOf('(') >= 0) {
+		    if(this.background.includes('#') || this.background.includes('rgba') || this.background.includes('gradient')) {
 		        this.inlineButtonStyles += 'background:' + this.background + ';';
 		    } else {
 				this.buttonStyles += ' bg-' + this.background;
 		    }
 
 		    // If color is hex color
-            if(this.color.indexOf('#') >= 0 || this.color.indexOf('(') >= 0) {
+            if(this.color.includes('#')|| this.color.includes('(')) {
                 this.inlineButtonStyles += 'color:' + this.color + ';';
             } else {
                 this.buttonStyles += ' text-' + this.color;
